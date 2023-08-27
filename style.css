@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: 100dvh;
+    overflow: hidden;
+    animation:shake linear 3s infinite;
+}
+
+img {
+    width: 100%;
+}
+
+#cloud,
+#track,
+#trees,
+#body,
+#left,
+#right {
+    position: absolute;
+    object-fit: cover;
+}
+
+#track {
+    bottom: 0;
+    height: 40vh;
+    width:800vw;
+    object-fit: fill;
+    animation:track linear 8s infinite;  
+}
+
+#cloud {
+    top: 0;
+    z-index: -1;
+    height: 60vh;
+}
+
+#trees {
+    bottom: 40%;
+    height: 50vh;
+}
+
+#body {
+    bottom: 39vh;
+    left: 23vw;
+    width: 20vw;
+}
+
+#left,
+#right {
+    width: 3.9vw;
+    bottom: 38vh;
+    animation: rotates linear .3s infinite;
+}
+
+#left {
+    left: 25.3vw;
+}
+
+#right {
+    left: 35.4vw;
+}
+
+@media(max-width:800px) {
+
+    #left,
+    #right {
+        bottom: 39vh;
+    }
+}
+
+@media(max-width:500px) {
+    #body {
+        width: 40vw;
+    }
+
+    #left,
+    #right {
+        width: 7.3vw;
+    }
+
+    #left {
+        left: 28vw;
+    }
+
+    #right {
+        left: 48vw;
+    }
+}
+
+@keyframes rotates{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes track{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+@keyframes shake{
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
