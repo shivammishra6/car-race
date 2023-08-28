@@ -5,10 +5,11 @@
 }
 
 body {
-    position: relative;
+    position: fixed;
     height: 100dvh;
-    overflow: hidden;
+    width: 100vw;
     animation:shake linear 3s infinite;
+    overflow: hidden;
 }
 
 img {
@@ -29,8 +30,12 @@ img {
     bottom: 0;
     height: 40vh;
     width:800vw;
-    object-fit: fill;
-    animation:track linear 8s infinite;  
+    object-fit:fill;
+    animation:track linear 3s infinite;  
+}
+
+i{
+    font-size:30px;
 }
 
 #cloud {
