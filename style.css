@@ -31,7 +31,7 @@ img {
     height: 40vh;
     width:800vw;
     object-fit:fill;
-    animation:track linear 3s infinite;  
+    animation:track linear 2s infinite;  
 }
 
 i{
